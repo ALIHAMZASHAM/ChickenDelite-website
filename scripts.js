@@ -10,18 +10,13 @@ let totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
 menuItems.forEach(item => {
     item.addEventListener('click', () => {
-         clickCount += 1;
-        if (clickCount === 2) {
-            let price = Number(item.dataset.price);
-            let name = item.dataset.name;
+         let price = Number(item.dataset.price);
+        let name = item.dataset.name;
 
-            totalPrice += price;
-            cartItems.push({name: name, price: price});
+        totalPrice += price;
+        cartItems.push({name: name, price: price});
 
-            updateCart();
-            
-            // Reset click count after adding item to the cart
-            clickCount = 0;
+        updateCart();
         }
     });
 });
@@ -77,6 +72,7 @@ function searchMenu() {
     printWindow.document.close();
     printWindow.print();
 }
+/*
 //description for menu
 window.onload = function() {
     var menuItems = document.getElementsByClassName("menu-item");
@@ -103,6 +99,7 @@ window.onload = function() {
         }
     }
 }
+*/
 
 
   
