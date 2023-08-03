@@ -10,14 +10,13 @@ let totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
 menuItems.forEach(item => {
     item.addEventListener('click', () => {
-         let price = Number(item.dataset.price);
+        let price = Number(item.dataset.price);
         let name = item.dataset.name;
 
         totalPrice += price;
         cartItems.push({name: name, price: price});
 
         updateCart();
-        }
     });
 });
 
@@ -98,8 +97,7 @@ window.onload = function() {
             modal.style.display = "none";
         }
     }
-}
-*/
+}*/
 
 
   
