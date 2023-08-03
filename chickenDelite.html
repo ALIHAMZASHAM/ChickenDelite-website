@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+    <div id="navbar">
+        <nav>
+            <a href="#menu">Menu</a> |
+            <a href="#location">Location</a> |
+            <a href="#order-form">Order</a>
+        </nav>
+        <div id="search">
+            <input type="text" id="search-box" placeholder="Search Menu..." onkeyup="searchMenu()">
+        </div>
+    </div>
+    <div>
+        <h1 id="restaurant-name">
+            <img src="clipart-chicken-logo.png" alt="Chicken Delite Logo">
+            Chicken Delite
+            <p id="restaurant-phone">Call Us: +44 7914 585271</p> 
+            <p id="Address">Address: 269 High Street, Slough</p>
+        </h1>
+        
+    </div>
+    
+    
+
+    <div id="menu">
+        <button class="menu-item" data-price="5.50" data-name="Fillet Burger" data-description="Dive into the rich taste of our Fillet Burger. It features a succulent chicken fillet, marinated and coated in our secret blend of spices, then fried to golden perfection. Served with crisp lettuce and creamy mayo on a soft, toasted bun.">
+            <div class="menu-item-image">
+                <img src="Fillet burger meal.jpeg" alt="Chicken Fillet Burger">
+            </div>
+            <div class="menu-item-label">
+                Fillet Burger - £5.50
+            </div>
+        </button>
+
+        <button class="menu-item" data-price="5.50" data-name="Nuggets Meal" data-description="Our six-piece nugget meal is a sure hit with kids and adults alike. It includes crispy, tender chicken nuggets served with a side of our fries and a drink of your choice." >
+            <div class="menu-item-image">
+                <img src="Nuggets Meal.jpeg" alt="Nuggets  Meal">
+            </div>
+            <div class="menu-item-label">
+                Nuggets Meal - £5.50
+            </div>
+        </button>
+
+        <button class="menu-item" data-price="4.00" data-name="Value Meal" data-description="Perfect for a quick, satisfying meal, this combo features one piece of our signature fried chicken, three crispy wings, and a portion of our  fries. A meal that's truly delightful.">
+            <div class="menu-item-image">
+                <img src="Value Meal.jpeg" alt="Value  Meal">
+            </div>
+            <div class="menu-item-label">
+                Value Meal - £4.00
+            </div>
+        </button>
+
+        <button class="menu-item" data-price="5.00" data-name="Delite Original" data-description="Satisfy your hunger with our combo of two juicy, crispy chicken pieces served with a generous side of fries. Refresh yourself with a drink of your choice to round off this hearty meal.">
+            <div class="menu-item-image">
+                <img src="Delite Original.jpeg" alt="Delite Origianl">
+            </div>
+            <div class="menu-item-label">
+                Delite Original - £5.00
+            </div>
+        </button>
+
+        <button class="menu-item" data-price="16.99" data-name="Delite Feast" data-description="The ultimate feast for your taste buds, this combo comes with eight pieces of our signature fried chicken, eight crispy wings, four portions of our fries, large coleslaw, large beans, and a drink of your choice. Ideal for sharing or for when you're really hungry.">
+            <div class="menu-item-image">
+                <img src="Delite Feast.jpeg" alt="Delite Feast">
+            </div>
+            <div class="menu-item-label">
+                Delite Feast - £16.99
+            </div>
+        </button>
+
+        <button class="menu-item" data-price="4.50" data-name="Combo Meal" data-description="Indulge in the heavenly flavor of our combo, which includes three pieces of our signature fried chicken and three spicy wings. Served with a drink of your choice. Perfect for when you’re really hungry.">
+            <div class="menu-item-image">
+                <img src="Combo Meal.jpeg" alt="Combo Meal">
+            </div>
+            <div class="menu-item-label">
+                Combo Meal - £4.50
+            </div>
+        </button>
+    </div>
+
+    
+
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </ul>
+        <p id="total-price">Total Price: £0.00</p>
+    </div>
+
+    <div id="Reciept">
+        <button id="print-reciept"><h2>Print Reciept</h2></button>
+    </div>
+
+    <div id="location">
+        <h2>Find us here</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.2981378307586!2d-0.5878682999999999!3d51.50774609999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48767ab6704b5535%3A0xfc3d162318ce80f7!2sChicken%20Delite!5e0!3m2!1sen!2suk!4v1691028459908!5m2!1sen!2suk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <div id="order-form">
+        <h2>Place your order</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="address">Delivery Address:</label><br>
+            <textarea id="address" name="address"></textarea><br>
+            <input type="submit" value="Place Order">
+        </form>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 id="modal-title">Modal Title</h1>
+            <p id="modal-description">Modal Description</p>
+        </div>
+    </div>
+    
+    
+
+    <script src="scripts.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
