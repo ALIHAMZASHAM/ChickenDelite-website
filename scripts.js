@@ -10,13 +10,19 @@ let totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
 menuItems.forEach(item => {
     item.addEventListener('click', () => {
-        let price = Number(item.dataset.price);
-        let name = item.dataset.name;
+         clickCount += 1;
+        if (clickCount === 2) {
+            let price = Number(item.dataset.price);
+            let name = item.dataset.name;
 
-        totalPrice += price;
-        cartItems.push({name: name, price: price});
+            totalPrice += price;
+            cartItems.push({name: name, price: price});
 
-        updateCart();
+            updateCart();
+            
+            // Reset click count after adding item to the cart
+            clickCount = 0;
+        }
     });
 });
 
