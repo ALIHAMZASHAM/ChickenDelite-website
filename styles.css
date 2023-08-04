@@ -217,3 +217,44 @@ nav a {
   50% { transform: scale(1.2); }
   100% { transform: scale(1); }
 }
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #f9f9f9;
+  color: #0a3960;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; 
+  left: 50%; 
+  margin-left: -100px; 
+  box-shadow: 0px 10px 20px rgba(49, 108, 236, 0.2);
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  transition: visibility 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@media only screen and (max-width: 600px) {
+  .tooltip .tooltiptext {
+    font-size: 14px;
+  }
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#restaurant-name img {
+  animation: rotate 100s ;
+}

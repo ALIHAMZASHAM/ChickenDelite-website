@@ -64,7 +64,7 @@ function searchMenu() {
   //print cart
   document.getElementById('print-reciept').onclick = function() {
     var printWindow = window.open('', '_blank');
-    printWindow.document.write('<html><head><title>Print Cart</title>');
+    printWindow.document.write('<html><head><title>Receipt</title>');
     printWindow.document.write('<style>/* Add some CSS if needed */</style></head><body>');
     printWindow.document.write(document.getElementById('cart').innerHTML);
     printWindow.document.write('</body></html>');
